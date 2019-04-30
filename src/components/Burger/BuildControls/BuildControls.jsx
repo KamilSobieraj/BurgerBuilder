@@ -25,6 +25,9 @@ const buildControls = props => (
         ingredientCount={props.ingredientsCount[e.type]}
       />
     ))}
+    <button className={classes.OrderButton} disabled={!props.purchasable}>
+      Order Now!
+    </button>
   </div>
 );
 export default buildControls;
