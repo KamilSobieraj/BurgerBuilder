@@ -15,13 +15,12 @@ const orderSummary = props => {
 
   return (
     <React.Fragment>
-      <h3>Tour order:</h3>
+      <h3>Your order:</h3>
       <p>You've composed burger with:</p>
       <ul>{ingredientSummary}</ul>
       <p>
         <strong>Total price: ${props.totalPrice.toFixed(2)}</strong>{" "}
       </p>
-      <p>Continue</p>
       <Button buttonType="Danger" clicked={props.purchaseCancelled}>
         Cancel
       </Button>
