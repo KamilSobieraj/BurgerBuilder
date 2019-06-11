@@ -83,7 +83,7 @@ class BurgerBuilder extends Component {
     this.setState({ purchasing: false });
   };
   purchaseContinueHandler = () => {
-    alert("Continue Button works!");
+    this.props.history.push("/checkout");
   };
   render() {
     const disabledInfo = {
