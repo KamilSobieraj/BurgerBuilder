@@ -8,7 +8,6 @@ import * as burgerBuilderActions from "../../store/actions/index";
 
 class BurgerBuilder extends Component {
   state = {
-    //purchasable: false,
     purchasing: false
   };
 
@@ -30,20 +29,13 @@ class BurgerBuilder extends Component {
     this.setState({ purchasing: false });
   };
   purchaseContinueHandler = () => {
-    // const queryParams = [];
-    // for (let i in this.props.ings) {
-    //   queryParams.push(
-    //     encodeURIComponent(i) + "=" + encodeURIComponent(this.props.ings[i])
-    //   );
-    // }
-    // const queryString = queryParams.join("&");
     this.props.history.push("/checkout");
   };
   render() {
     const disabledInfo = {
       ...this.props.ings
     };
-    //this loop wiell outut true/false value
+    //this loop wiell output true/false value
     for (let key in disabledInfo) {
       disabledInfo[key] = disabledInfo[key] <= 0;
     } // => e.g. {salad: true, meat:false, cheese: false}
